@@ -33,6 +33,6 @@ This project is a **basic ETL (Extract, Transform, Load) pipeline** focused on *
 
 
 ## Next Steps
-🔹 Automate the process with Apache Airflow
-🔹 Store cleaned data in a database (MySQL, Snowflake)
-🔹 Add unit tests for data validation
+- Automate the process with Apache Airflow
+- Store cleaned data in a database (MySQL, Snowflake)
+- Add unit tests for data validation

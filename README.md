@@ -1,38 +1,93 @@
-# ETL 101: Data Wash 🧼🚀  
+# ETL-101-Data-Wash 🧼🚀  
 
-## Project Description  
-This project is a **basic ETL (Extract, Transform, Load) pipeline** focused on **data cleaning** using Python and Pandas. The goal is to take a messy dataset, apply **data transformation steps**, and prepare it for analysis or storage in a database.  
+## 📌 Project Description  
+This project is a **modular ETL pipeline** designed to extract, clean, and save a dataset from Kaggle. The dataset used is from **Spotify**, and the goal is to process raw data into a structured format ready for analysis.  
 
-## Features  
-✅ Handle missing values (fill or remove)  
-✅ Remove duplicate records  
-✅ Standardize column names  
-✅ Normalize text formats (uppercase/lowercase)  
-✅ Save cleaned data as CSV  
+The pipeline follows a standard ETL process:  
+✅ **Extract** – Download data from Kaggle  
+✅ **Transform** – Clean and preprocess the dataset  
+✅ **Load** – Save the cleaned dataset for further analysis  
 
-## Tech Stack  
-- 🐼 **Pandas** – Data manipulation  
-- 🐍 **Python** – Core scripting  
-- 🗄 **CSV** – Input & output format  
+---
 
-## How to Use  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/alinedsr/etl-101-data-wash
-   cd etl-101-data-wash
+## 📂 Project Structure  
+```
+etl-101-data-wash/
+│── app/
+│   ├── extract.py   # Downloads dataset from Kaggle
+│   ├── transform.py # Cleans and preprocesses data
+│   ├── load.py      # Saves the cleaned dataset
+│── data/
+│   ├── processed/   # Folder for cleaned data
+│   ├── raw/         # Folder for raw data
+│── main.py          # Orchestrates the entire ETL process
+│── poetry.lock
+│── pyproject.toml
+│── README.md
+```
 
-2. Install dependencies using Poetry:
-   ```bash
-   poetry install
+---
 
-3. Run the script:
-   ```bash
-   poetry run python clean_data.py
+## 🛠️ Tech Stack  
+- 🐍 **Python** – Core programming language  
+- 📦 **Poetry** – Dependency management  
+- 📊 **Pandas** – Data manipulation  
+- 💾 **Kaggle API** – Dataset extraction  
 
-4. Check the output in the output/ folder.
+---
 
+## 🚀 How to Run  
 
-## Next Steps
-- Automate the process with Apache Airflow
-- Store cleaned data in a database (MySQL, Snowflake)
-- Add unit tests for data validation
+### **1️⃣ Install Dependencies**  
+Ensure you have **Poetry** installed, then run:  
+```bash
+poetry install
+```
+
+### **2️⃣ Configure Kaggle API**  
+If you haven't set up the Kaggle API yet, follow these steps:  
+1️⃣ Go to [Kaggle Account](https://www.kaggle.com/settings)  
+2️⃣ Scroll to the **API** section and click **Create New Token**  
+3️⃣ Move the downloaded `kaggle.json` file to:  
+   - **Linux/Mac**: `~/.kaggle/kaggle.json`  
+   - **Windows**: `C:\Users\YOUR_USER\.kaggle\kaggle.json`  
+4️⃣ Set permissions (Linux/Mac only):  
+```bash
+chmod 600 ~/.kaggle/kaggle.json
+```
+
+### **3️⃣ Run the ETL Pipeline**  
+To execute the complete ETL process, run:  
+```bash
+poetry run python main.py
+```
+
+This will:  
+✔️ Download the dataset  
+✔️ Clean and preprocess the data  
+✔️ Save the cleaned dataset in `data/processed/spotify_cleaned.csv`
+
+---
+
+## 📊 Output Data  
+The cleaned dataset is saved in:  
+```
+data/processed/spotify_cleaned.csv
+```
+This file is ready for analysis and further processing.  
+
+---
+
+## 🌟 Next Steps  
+🔹 Automate execution with Apache Airflow  
+🔹 Store cleaned data in a cloud database (Snowflake, BigQuery)  
+🔹 Add data validation checks  
+
+---
+
+## 📜 License  
+This project is open-source and available under the **MIT License**. Feel free to use and contribute!  
+
+---
+
+🚀 **Happy Data Cleaning!** 🧼📊

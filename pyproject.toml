@@ -9,6 +9,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 pandas = "^2.2.3"
+kagglehub = {extras = ["pandas-datasets"], version = "^0.3.10"}
+kaggle = "^1.6.17"
 
 
 [build-system]

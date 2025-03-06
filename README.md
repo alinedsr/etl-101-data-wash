@@ -18,7 +18,7 @@ This project is a **basic ETL (Extract, Transform, Load) pipeline** focused on *
 ## How to Use  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/seu-usuario/etl-101-data-wash.git
+   git clone https://github.com/alinedsr/etl-101-data-wash
    cd etl-101-data-wash
 
 2. Install dependencies using Poetry:
